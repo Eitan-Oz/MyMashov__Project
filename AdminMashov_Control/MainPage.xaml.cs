@@ -1,0 +1,16 @@
+namespace AdminMashov_Control
+{
+    public partial class MainPage : ContentPage
+    {
+
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        private void OnLoginClicked(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
