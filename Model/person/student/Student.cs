@@ -1,9 +1,4 @@
-using Model.address;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Model.person.student
 {
@@ -12,7 +7,7 @@ namespace Model.person.student
 
         private char _gender;
         private int _classID;
-        private List<string> teacherIDs= new List<string>();
+        private List<string> teacherIDs = new List<string>();
 
 
         public List<string> TeacherIDs
@@ -35,8 +30,8 @@ namespace Model.person.student
         {
 
         }
-        public Student(string studentID,string Fname, string Lname, string phoneNumber, Address address, string password, char gender, int classID)
-            : base(studentID,Fname, Lname, phoneNumber, address, password)
+        public Student(string studentID, string Fname, string Lname, string phoneNumber, Address address, string password, char gender, int classID)
+            : base(studentID, Fname, Lname, phoneNumber, address, password)
         {
 
             this.Gender = gender;

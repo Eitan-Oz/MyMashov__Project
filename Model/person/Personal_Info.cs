@@ -1,10 +1,3 @@
-using System;
-using Model.address;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Model.person
 {
     public class Personal_Info
