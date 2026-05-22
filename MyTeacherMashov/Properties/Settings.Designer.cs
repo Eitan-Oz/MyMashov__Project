@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyStudentMashov.Properties
+namespace MyTeacherMashov.Properties
 {
 
 

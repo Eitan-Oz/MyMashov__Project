@@ -1,7 +1,7 @@
-﻿<Application x:Class="MyStudentMashov.App"
+﻿<Application x:Class="MyTeacherMashov.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MyStudentMashov"
+             xmlns:local="clr-namespace:MyTeacherMashov"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

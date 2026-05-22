@@ -1,33 +1,27 @@
-﻿using System;
+﻿using DAL; // Links to your DAL project
+using System;
 using System.Windows;
-using System.Windows.Controls;
-using DAL; // This links your project to the BaseDal class
 
-namespace MyStudentMashov
+namespace MyTeacherMashov
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        // Creating an instance of your Data Access Layer
         private BaseDal dal;
 
         public MainWindow()
         {
             InitializeComponent();
-            dal = new BaseDal(); // Initializes the connection object from BaseDal.cs
+            dal = new BaseDal();
         }
 
-        /// <summary>
-        /// Event handler for the Login button click
-        /// </summary>
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             string userId = txtUsername.Text.Trim();
             string password = pwPassword.Password;
 
-            // 1. Basic validation - ensure fields are not empty
             if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Please enter both User ID and Password.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -36,20 +30,15 @@ namespace MyStudentMashov
 
             try
             {
-                // 2. Build the SQL Query
-                // Note: Make sure 'Students' matches your actual database table name, 
-                // and 'PersonalID' / 'Password' match your actual column names.
-                string sql = $"SELECT COUNT(*) FROM Students WHERE PersonalID = '{userId}' AND Password = '{password}'";
+                // Note: Modified table name to 'Teachers' based on your Teacher class
+                string sql = $"SELECT COUNT(*) FROM Teachers WHERE PersonalID = '{userId}' AND Password = '{password}'";
 
-                // 3. Execute query using your BaseDal method
                 bool isUserExists = dal.ExecuteSelectBoolQuery(sql);
 
-                // 4. Handle the result
                 if (isUserExists)
                 {
                     MessageBox.Show("Login successful! Welcome.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                    // Optional: Open the next window here
                     // MainDashboard dashboard = new MainDashboard();
                     // dashboard.Show();
                     // this.Close();
@@ -61,21 +50,16 @@ namespace MyStudentMashov
             }
             catch (Exception ex)
             {
-                // If BaseDal throws an error (e.g., database file not found), it will be caught here
                 MessageBox.Show("Database connection error: " + ex.Message, "System Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        // --- Event handlers required by your XAML to prevent compilation errors ---
-
         private void txtUsername_GotFocus(object sender, RoutedEventArgs e)
         {
-            // You can add placeholder visual logic here if needed
         }
 
         private void txtUsername_LostFocus(object sender, RoutedEventArgs e)
         {
-            // You can add placeholder visual logic here if needed
         }
     }
 }
