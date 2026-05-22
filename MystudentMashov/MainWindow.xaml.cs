@@ -1,6 +1,6 @@
 ﻿using System.Windows;
-using 
-
+using DAL;
+using Model;
 namespace MystudentMashov
 {
     /// <summary>
