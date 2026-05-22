@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 
 
 namespace DAL
@@ -36,7 +29,7 @@ namespace DAL
 
         public int ExecuteInsertQuery(string sql)
         {
-             return ExecuteQuery(sql);
+            return ExecuteQuery(sql);
         }
         public int ExecuteUpdateQuery(string sql)
         {

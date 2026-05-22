@@ -30,8 +30,8 @@ namespace Model.person.student
         {
 
         }
-        public Student(string studentID, string Fname, string Lname, string phoneNumber, Address address, string password, char gender, int classID)
-            : base(studentID, Fname, Lname, phoneNumber, address, password)
+        public Student(string studentID, string Fname, string Lname, string phoneNumber, string password, char gender, int classID)
+            : base(studentID, Fname, Lname, phoneNumber, password)
         {
 
             this.Gender = gender;

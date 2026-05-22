@@ -7,7 +7,6 @@ namespace Model.person
         private string _lastName;
         private string _phoneNumber;
         private string _password;
-        private Address _address;
 
 
         public string PersonalID
@@ -37,22 +36,16 @@ namespace Model.person
             protected set { _password = value; }
         }
 
-        public Address Address
-        {
-            get { return _address; }
-            protected set { _address = value; }
-        }
 
         public Personal_Info()
         {
         }
-        public Personal_Info(string personalID, string Fname, string Lname, string phoneNumber, Address address, string password)
+        public Personal_Info(string personalID, string Fname, string Lname, string phoneNumber, string password)
         {
             this.PersonalID = personalID;
             this.FirstName = Fname;
             this.LastName = Lname;
             this.PhoneNumber = phoneNumber;
-            this.Address = address;
             this.Password = password;
 
         }
@@ -72,8 +65,7 @@ namespace Model.person
         public override string ToString()
         {
             // שימוש באופרטור ?. מונע קריסה אם Address הוא null בלי צורך ב-try-catch
-            string addressStr = Address?.ToString() ?? "No Address Provided";
-            return $"PersonalID: {PersonalID}, FullName: {GetFullName()}, Address: {addressStr}";
+            return $"PersonalID: {PersonalID}, FullName: {GetFullName()}";
         }
     }
 }

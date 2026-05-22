@@ -1,8 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Model.person
 {
@@ -10,7 +6,7 @@ namespace Model.person
     {
         private int subjectID;
         private bool isClassTeacher;
-        public List<string> StudentIDs=new List<string>();
+        public List<string> StudentIDs = new List<string>();
 
         public bool IsClassTeacher
         {
@@ -26,8 +22,8 @@ namespace Model.person
         {
         }
 
-        public Teacher(string teacherID,string Fname, string Lname, string phoneNumber, address.Address address, string password, int subjectID, bool isClassTeacher)
-            : base(teacherID,Fname, Lname, phoneNumber, address, password)
+        public Teacher(string teacherID, string Fname, string Lname, string phoneNumber, string password, int subjectID, bool isClassTeacher)
+            : base(teacherID, Fname, Lname, phoneNumber, password)
         {
             this.SubjectID = subjectID;
             this.IsClassTeacher = isClassTeacher;

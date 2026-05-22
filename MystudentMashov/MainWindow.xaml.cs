@@ -1,6 +1,4 @@
 ﻿using System.Windows;
-using DAL;
-using Model;
 namespace MystudentMashov
 {
     /// <summary>
@@ -11,6 +9,7 @@ namespace MystudentMashov
         public MainWindow()
         {
             InitializeComponent();
+            DAL.BaseDal connect = new DAL.BaseDal();
         }
     }
 }
