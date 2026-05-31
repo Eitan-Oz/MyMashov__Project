@@ -16,7 +16,7 @@ namespace DAL
             // ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=F:\\MyProject\\LayersExample2\\DAL\\Database1.mdf;Integrated Security=True";
 
             // נתיב יחסי למיקום קובץ הדטה בייס  
-            string DBfileName = "DAL\\Database1.mdf";
+            string DBfileName = "data\\mashovdb.accdb";
             // צריך להוריד  2 תיקיות מהסוף
             // (bin → Debug ) שם ממוקם הדטה בייס ברירת מחדל
             string projectDir = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\"));
